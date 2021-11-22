@@ -2,7 +2,7 @@
 
 d3.csv("howboutdis.csv", d3.autoType).then(data => {
 
-    // console.log("loading")
+    console.log("loading")
 
     const year = document.getElementById('result-year').innerHTML;
     var count = 0;
