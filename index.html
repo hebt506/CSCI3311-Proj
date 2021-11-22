@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation is Everywhere</title>
+  <link rel="stylesheet" href="/welcomePage.css">
+  <script defer src="/Validation.js"></script>
+</head>
+
+<body>
+  <main id="main-holder">
+    <h1 id="login-header">Inflation Is Everywhere!</h1>
+    
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid Name <span id="error-msg-second-line">and/or Age</span></p>
+    </div>
+    
+    <form id="login-form" action="StartPage.html" method="get">
+      <input type="text" name="name" id="name-field" class="login-form-field" placeholder="Enter Your Name">
+      <input type="text" name="age" id="age-field" class="login-form-field" placeholder="Enter Your Age">
+      <input type="submit" value="Go!" id="login-form-submit" onclick="handleSubmit()">
+    </form>
+  
+  </main>
+</body>
+
+</html>
