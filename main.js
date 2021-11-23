@@ -1,10 +1,13 @@
 // import {AffordabilityChart} from './Affordability.js';
 
-d3.csv("howboutdis.csv", d3.autoType).then(data => {
+d3.csv("projdata.csv", d3.autoType).then(data => {
 
-    console.log("loading")
+    // console.log("loading")
 
-    const year = document.getElementById('result-year').innerHTML;
+    const params = (new URL(document.location)).searchParams;
+    const age = params.get('age');
+    let year = 2021 - age;
+    console.log(year)
     var count = 0;
 
     var baseHome = 0;
@@ -18,7 +21,7 @@ d3.csv("howboutdis.csv", d3.autoType).then(data => {
     const lastPork = 481.6;
 
     data.forEach(e => {
-        if (year === e.Date.substring(0, 4) && count < 1) {
+        if (year.toString().substring(2,4) === e.Date2.substring(6, 9) && count < 1) {
             count += 1;
             baseHome = e.Home;
             baseGas = e.Gas;
